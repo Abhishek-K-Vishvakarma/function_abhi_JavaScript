@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function in JavaScript!</title>
+</head>
+<body>
+  <h1>Function in JavaScript</h1>
+  <script>
+    /* We have try to Synchronus and Asynchronus Functions*/
+
+    // Synchronus Function: Synchronus is blocking function. >>>>>>>>
+
+    function FunName1(){
+      console.log("Code Block!");  // Code block.
+    }
+    FunName1();
+
+   // Asynchronus Function: Asynchronus is non-blocking function. >>>>>>>>
+    function FunName2(){
+          console.log("Non-blocking");
+    }
+
+    let fun = setTimeout(()=>{  // Asynchronus calling.
+      FunName2();
+    },1000);
+  </script>
+</body>
+</html>

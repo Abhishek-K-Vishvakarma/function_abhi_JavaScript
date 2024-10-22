@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator</title>
+</head>
+<body>
+  <h1>Generator Function in JavaScript!</h1>
+
+  <button onclick="OtpGen()">OTP Generator</button>
+  <h1>Your Otp is:</h1><h1 id="out"></h1>
+ <script>
+function* GenOtp(){
+  let data = 100;
+  while(true){
+    data++;
+    yield data;
+  }
+}
+
+let cal = GenOtp();
+
+function OtpGen(){
+  document.getElementById('out').innerText = Math.random(cal.value).toFixed(6)*1000000;
+}
+ </script> 
+</body>
+</html>

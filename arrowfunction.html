@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Function</title>
+</head>
+<body>
+  <h1>Arrow Function</h1>
+  <script>
+    // 1. Regular Function is: >>>>
+
+    function Fun(){
+      console.log("Hello World!");
+    }
+    Fun();
+
+    // Regular function with Async calling: >>>>
+
+   function Name(a, b){
+    let z = a + b;
+    console.log(z);
+   };
+   let x = 20;
+   let y = 30;
+
+   let num = setTimeout(()=>{
+      Name(x,y);
+   },1000); // Call after 1 sec (1000 MilliSec = 1 Sec).
+
+   // 2. Arrow Function.  
+
+   const str = () => {
+    console.log("Hello World!");
+   };
+   
+   str();
+   
+   // Async of ArrowFunction: >>>>
+
+   const Num = (a, b) =>{
+    let iq = a + b;
+    console.log(iq);
+   };
+
+   let s = 100;
+   let t = 200;
+   
+
+  // setInterval(); 
+
+   let total = setInterval(() => { 
+       Num(s, t);
+   },2000);
+
+   // clearTimeout()
+   let result = setInterval(() => {
+       Num(s, t);
+       clearTimeout(result);
+   }, 1000);
+
+  </script>
+</body>
+</html>

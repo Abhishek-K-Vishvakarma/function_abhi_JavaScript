@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synchronus and Asynchronus Function</title>
+</head>
+<body>
+  <h1><b>Synchronus and Asynchronus Function</b></h1>
+  <script>
+    // Synchronus function are called blocking function.
+    // Asynchronus function are called non-blocking function.
+
+    function sync(a, b){
+      let z = a + b;
+      console.log("Sum of z : "+ z);
+      return z;
+    }
+    // Synchronus with argument.
+    let x = 50;
+    let y = 100;
+    sync(x, y);
+
+
+    // Asynchronus Function........
+
+    function Async(i, q){
+      let res = i + q;
+      console.log("Sum of res : " + res);
+    }
+
+    let p = 200;
+    let s = 800;
+    let result = setTimeout(()=>{
+      Async(p, s);
+    }, 1000);
+
+    //Create multiplication or table of any given number by Asynchronus function.
+
+    let array = [];
+    function Multi(num){
+         for(let i = 1; i <= 10; i++){
+          array.push(num * i);
+         }
+         console.log(array);
+         return array;
+    }
+    let n = 5;
+    let all = setTimeout(()=>{
+        Multi(n);
+    },2000);
+  </script>
+</body>
+</html>
